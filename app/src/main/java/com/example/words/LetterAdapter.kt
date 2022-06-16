@@ -1,6 +1,5 @@
 package com.example.words
 
-
 import android.content.Intent
 import android.os.Build
 import android.view.LayoutInflater
@@ -10,14 +9,13 @@ import android.view.accessibility.AccessibilityNodeInfo
 import android.widget.Button
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
-
-class LetterAdapter : RecyclerView.Adapter<LetterAdapter.LetterViewHolder>() {
+class LetterAdapter :
+    RecyclerView.Adapter<LetterAdapter.LetterViewHolder>() {
 
     private val list = ('A').rangeTo('Z').toList()
 
     class LetterViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
-
-        val button: Button = view.findViewById<Button>(R.id.button_item)
+        val button = view.findViewById<Button>(R.id.button_item)
     }
 
     override fun getItemCount(): Int {
